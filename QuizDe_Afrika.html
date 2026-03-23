@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>Geografie-Quiz</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="GeoQuiz.css" media="screen" />
+</head>
+<body>    
+        <div id="menu">
+            <a href="QuizDe_Europa.html">Europa</a>
+		    <a href="QuizDe_Afrika.html"class="highlite">Afrika</a>
+            <a href="QuizDe_Amerika.html">Amerika</a>
+            <a href="QuizDe_Asien.html">Asien</a>
+            <a href="QuizDe_Australien.html">Australien</a>
+
+		</div>
+    
+    <div class="container">
+        <div id="progress">Fragen: 0/0</div>
+        <img id="questionImage" src="Bilder_Eu/Sicile(I).png" alt="Frage Bild">
+        <p id="question">Frage wird hier angezeigt</p>
+        <input type="text" id="userAnswer" placeholder="Antwort hier eingeben">
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+        const questions = [
+            
+            {
+                question: "Wie heisst dieser Berg?",
+                answer: "Mount Kenia",
+                image: "De_Geo_Bilder/Bilder_B/Mount Kenia.png"
+            },
+            {
+                question: "Wie heisst dieser Berg?",
+                answer: "Kilimandscharo",
+                image: "De_Geo_Bilder/Bilder_B/Kilimandscharo.png"
+            },
+            {
+                question: "Wie heisst dieses Gebirge?",
+                answer: "Atlas",
+                image: "De_Geo_Bilder/Bilder_B/Atlas.png"
+            },
+            {
+                question: "Wie heisst dieses Gebirge?",
+                answer: "Hoggar",
+                image: "De_Geo_Bilder/Bilder_B/Hoggar.png"
+            },
+            {
+                question: "Wie heisst diese Wüste?",
+                answer: "Kalahari",
+                image: "De_Geo_Bilder/Bilder_B/Kalahari.png"
+            },
+            {
+                question: "Wie heisst diese Wüste?",
+                answer: "Namib",
+                image: "De_Geo_Bilder/Bilder_B/Namib.png"
+            },
+            {
+                question: "Wie heisst diese Wüste?",
+                answer: "Sahara",
+                image: "De_Geo_Bilder/Bilder_B/Sahara.png"
+            },
+            {
+                question: "Wie heisst dieser Ort?",
+                answer: "Kap der Guten Hoffnung",
+                image: "De_Geo_Bilder/Bilder_B/Kap der Guten Hoffnung.png"
+            },
+            
+            {
+                question: "Wie heisst dieser See?",
+                answer: "Malawisee",
+                image: "De_Geo_Bilder/Bilder_B/Malawisee.png"
+            },
+            {
+                question: "Wie heisst dieser See?",
+                answer: "Tanganjikasee",
+                image: "De_Geo_Bilder/Bilder_B/Tanganjikasee.png"
+            },
+            {
+                question: "Wie heisst dieser See?",
+                answer: "Tschadsee",
+                image: "De_Geo_Bilder/Bilder_B/Tschadsee.png"
+            },
+            {
+                question: "Wie heisst dieser See?",
+                answer: "Victoriasee",
+                image: "De_Geo_Bilder/Bilder_B/Victoriasee.png"
+            },
+            {
+                question: "Wie heisst dieser Fluss?",
+                answer: "Niger",
+                image: "De_Geo_Bilder/Bilder_B/Niger.jpg"
+            },
+            {
+                question: "Wie heisst dieser Fluss?",
+                answer: "Nil",
+                image: "De_Geo_Bilder/Bilder_B/Nil.jpg"
+            },
+            {
+                question: "Wie heissen diese Wasserfälle?",
+                answer: "Viktoriafälle",
+                image: "De_Geo_Bilder/Bilder_B/Viktoriafälle.jpg"
+            },
+            
+            {
+                question: "Wie heisst dieser Fluss?",
+                answer: "Sambesi",
+                image: "De_Geo_Bilder/Bilder_B/Sambesi.jpg"
+            },
+            {
+                question: "Wie heisst dieser Kanal?",
+                answer: "Suezkanal",
+                image: "De_Geo_Bilder/Bilder_B/Suezkanal.jpg"
+            },
+            
+            {
+                question: "Wie heisst diese Meerenge?",
+                answer: "Bab el Mandab",
+                image: "De_Geo_Bilder/Bilder_B/Bab el Mandab.jpg"
+            },
+            {
+                question: "Wie heisst dieser Golf?",
+                answer: "Golf von Aden",
+                image: "De_Geo_Bilder/Bilder_B/Golf von Aden.jpg"
+            },
+            
+            {
+                question: "Wie heisst dieser Golf?",
+                answer: "Golf von Guinea",
+                image: "De_Geo_Bilder/Bilder_B/Golf von Guinea.jpg"
+            },
+            {
+                question: "Wie heisst dieses Meer?",
+                answer: "Rotes Meer",
+                image: "De_Geo_Bilder/Bilder_B/Rotes Meer.png"
+            },
+            
+            //Städte
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Daressalam",
+                image: "De_Geo_Bilder/Bilder_B/Daressalam.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Johannesburg",
+                image: "De_Geo_Bilder/Bilder_B/Johannesburg.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Khartum",
+                image: "De_Geo_Bilder/Bilder_B/Khartum.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Kinshasa",
+                image: "De_Geo_Bilder/Bilder_B/Kinshasa.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Lagos",
+                image: "De_Geo_Bilder/Bilder_B/Lagos.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Abidjan",
+                image: "De_Geo_Bilder/Bilder_B/Abidjan.png"
+            },
+            
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Addis Abeba",
+                image: "De_Geo_Bilder/Bilder_B/Addis Abeba.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Algier",
+                image: "De_Geo_Bilder/Bilder_B/Algier.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Ouagadougou",
+                image: "De_Geo_Bilder/Bilder_B/Ouagadougou.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Dakar",
+                image: "De_Geo_Bilder/Bilder_B/Dakar.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Kairo",
+                image: "De_Geo_Bilder/Bilder_B/Kairo.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Kapstadt",
+                image: "De_Geo_Bilder/Bilder_B/Kapstadt.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Antananarivo",
+                image: "De_Geo_Bilder/Bilder_B/Antananarivo.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Nairobi",
+                image: "De_Geo_Bilder/Bilder_B/Nairobi.png"
+            },
+            {
+                question: "Wie heisst diese Stadt?",
+                answer: "Tunis",
+                image: "De_Geo_Bilder/Bilder_B/Tunis.png"
+            }
+            
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        
+        // Fragen shuffel
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }shuffleArray(questions);
+        function updateProgress() {
+            document.getElementById("progress").textContent =  currentQuestionIndex+ "/" + questions.length;
+        }
+
+        function loadQuestion() {
+            document.getElementById("question").textContent = questions[currentQuestionIndex].question;
+            document.getElementById("questionImage").src = questions[currentQuestionIndex].image;
+            document.getElementById("userAnswer").value = "";
+            document.getElementById("result").textContent = "";
+            updateProgress();
+        }
+
+        function checkAnswer() {
+            const userAnswer = document.getElementById("userAnswer").value.trim().toLowerCase();
+            const correctAnswer = questions[currentQuestionIndex].answer.toLowerCase();
+            const resultDiv = document.getElementById("result");
+
+            if (userAnswer === correctAnswer) {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion(); 
+                    updateProgress();
+                } else {
+                    resultDiv.textContent = "Gratuliere! Du hast " + score + " Fehler gemacht.";
+                    resultDiv.style.color = "green";
+                    document.getElementById("question").textContent = "Das Quiz ist beendet!";
+                    document.getElementById("userAnswer").style.display = "none"; // Eingabefeld ausblenden
+                    document.getElementById("questionImage").style.display = "none"; // Bild ausblenden
+                    document.getElementById("progress").textContent = " ";
+                }
+            } else {
+                resultDiv.textContent = "Falsch. Die Richtige Antwort währe " + questions[currentQuestionIndex].answer + " gewesen.";
+                resultDiv.style.color = "red";
+                score++;
+            }
+        }
+
+        document.getElementById("userAnswer").addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                checkAnswer();
+            }
+        });
+        loadQuestion();
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
+}
+#menu {
+    border-radius: 5px;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+
+#menu a {
+    display: block; 
+    width: 100%; 
+    padding: 15px 10px; 
+    margin: 5px 0; 
+    text-decoration: none;
+    background-color: #f9f9f9;
+    border-radius: 5px; 
+}
+
+.highlite {
+    background-color: white!important;
+}
+ 
+.container {
+    position: relative; /* Container als Bezugspunkt für absolute Positionierung */
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/*
+#fcd0d0
+#f8a3a3
+#menu a:hover {
+    background-color: #f8f1f1;
+}*/
+img {
+    max-width: 100%;
+    height: auto;
+    width: 400px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#question {
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+.result {
+    margin-top: 15px;
+    font-size: 1.2em;
+}
+
+#progress {
+    position: absolute;
+    top: 10px; /* Abstand vom oberen Rand des Containers */
+    left: 20px; /* Abstand vom linken Rand des Containers */
+    font-size: 16px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.8); /* Hintergrund für bessere Lesbarkeit */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
