@@ -49,17 +49,16 @@
         
         <script>
             
-            let Buttonvisible = false;
-            document.getElementById("buttonmenu").addEventListener("click", function() {
-                if (Buttonvisible === true) {
-                    document.getElementById("menu").style.display = "none"; 
-                    Buttonvisible = false;} 
-                else {
-                    document.getElementById("menu").style.display = "flex"; 
-                    Buttonvisible = true;}
-            });
 
-        
+
+			document.getElementById("buttonmenu").addEventListener("click", () => {
+			   document.getElementById("menu").classList.toggle("active");
+			});
+
+
+
+
+			
             document.getElementById("Komm_wir_gehen_zu_Seite_2").addEventListener("click", function() {
                 window.location.href = "NapoleonS2.html";
             });
