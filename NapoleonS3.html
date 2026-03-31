@@ -111,15 +111,9 @@
 
         <script>
 
-       		let Buttonvisible = false;
-            document.getElementById("buttonmenu").addEventListener("click", function() {
-                if (Buttonvisible === true) {
-                    document.getElementById("menu").style.display = "none"; 
-                    Buttonvisible = false;} 
-                else {
-                    document.getElementById("menu").style.display = "flex"; 
-                    Buttonvisible = true;}
-            });
+			document.getElementById("buttonmenu").addEventListener("click", () => {
+			   document.getElementById("menu").classList.toggle("active");
+			});
 
         </script>   
     
