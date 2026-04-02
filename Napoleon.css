@@ -79,6 +79,10 @@ h3::before {
     font-size: 22px;
 }
 
+#menu.active {
+    display: none;
+}
+
 #menu a {
     color: #fdf6e3;
     text-decoration: none;
