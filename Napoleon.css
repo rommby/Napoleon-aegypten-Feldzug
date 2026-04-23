@@ -111,6 +111,11 @@ p {
     border-radius: 10px;
 }
 
+p1 {color: #8b6f47;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
 
 a {
     color: #8b6f47;
